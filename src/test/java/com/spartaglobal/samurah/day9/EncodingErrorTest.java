@@ -1,11 +1,8 @@
-package com.spartaglobal.samurah.day8;
+package com.spartaglobal.samurah.day9;
 
 import com.spartaglobal.samurah.utilities.FileReader;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import java.io.FileNotFoundException;
 
 import static org.junit.jupiter.api.Assertions.*;
 

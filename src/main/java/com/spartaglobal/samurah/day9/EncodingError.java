@@ -1,9 +1,9 @@
-package com.spartaglobal.samurah.day8;
+package com.spartaglobal.samurah.day9;
 
 
 public class EncodingError {
     /**
-     * This class is the core of day 8 problem. Create an instance of this class, giving a long array and the considered
+     * This class is the core of day 9 problem. Create an instance of this class, giving a long array and the considered
      * previous numbers. This class is tested. Any modification of the code should be validated by testing it using
      * the suit of tests in "test" directory.
      */

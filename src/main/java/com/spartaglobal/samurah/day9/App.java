@@ -1,4 +1,4 @@
-package com.spartaglobal.samurah.day8;
+package com.spartaglobal.samurah.day9;
 
 import com.spartaglobal.samurah.utilities.FileReader;
 
@@ -7,9 +7,8 @@ import java.io.FileNotFoundException;
 public class App {
     public static void main(String[] args) {
         long initialTime = System.nanoTime();
-        FileReader fileReader;
         try {
-            fileReader = new FileReader("src/main/java/com/spartaglobal/samurah/day8/EncodingError.txt");
+            FileReader fileReader = new FileReader("src/main/java/com/spartaglobal/samurah/day8/EncodingError.txt");
             EncodingError encodingError = new EncodingError(fileReader.getFileInput().stream().mapToLong(Long::parseLong).toArray(),25);
             long firstNotMatchingTheRule = encodingError.getFirstNotMatchingTheRule();
             System.out.println(firstNotMatchingTheRule);
