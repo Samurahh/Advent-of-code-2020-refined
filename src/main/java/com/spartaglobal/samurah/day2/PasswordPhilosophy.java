@@ -13,27 +13,27 @@ public class PasswordPhilosophy {
         }
     }
 
-    public int getTotalCompliantFirstPolicy(){
+    public int getTotalCompliantFirstPolicy() {
         int count = 0;
         for (PasswordPolicy passwordPolicy : passwordPolicies) {
-            if(passwordPolicy.isCompliantFirstPolicy()){
+            if (passwordPolicy.isCompliantFirstPolicy()) {
                 count++;
             }
         }
         return count;
     }
 
-    public int getTotalCompliantSecondPolicy(){
+    public int getTotalCompliantSecondPolicy() {
         int count = 0;
         for (PasswordPolicy passwordPolicy : passwordPolicies) {
-            if(passwordPolicy.isCompliantSecondPolicy()){
+            if (passwordPolicy.isCompliantSecondPolicy()) {
                 count++;
             }
         }
         return count;
     }
 
-    public PasswordPolicy[] getPasswordPolicies(){
+    public PasswordPolicy[] getPasswordPolicies() {
         return passwordPolicies;
     }
 
@@ -61,6 +61,9 @@ public class PasswordPhilosophy {
          * must contain charTarget at least firstDigits times and the most secondDigits times.
          */
         public boolean isCompliantFirstPolicy() {
+            if (password.length() < firstDigits) {
+                return false;
+            }
             int count = 0;
             for (char o : password.toCharArray()) {
                 if (o == charTarget) {
@@ -78,12 +81,15 @@ public class PasswordPhilosophy {
          * must contain charTarget at position firstDigits OR secondDigits!
          */
         public boolean isCompliantSecondPolicy() {
+            if (password.length() < firstDigits || password.length() < secondDigits) {
+                return false;
+            }
             char[] passwordChars = password.toCharArray();
             int occurrence = 0;
-            if(passwordChars[firstDigits-1] == charTarget){
+            if (passwordChars[firstDigits - 1] == charTarget) {
                 occurrence++;
             }
-            if(passwordChars[secondDigits-1] == charTarget){
+            if (passwordChars[secondDigits - 1] == charTarget) {
                 occurrence++;
             }
             return occurrence == 1;

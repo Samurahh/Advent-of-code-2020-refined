@@ -4,15 +4,24 @@ import java.util.Arrays;
 
 /**
  * This class is core solver of day 1 of Advent of Calendar 2020.
- * - find numberOfEntries entries that sum to sumValue.
+ * - find numberOfEntries entries that sum sumValue.
  * - multiply those entries together and return the value.
+ * NOTE: There may be various possible combinations for sumValue formed by
+ * numberOfEntries values!
+ ******* The algorithm will find the first combination which will return
+ ******* the lowest product.
  */
+
 public class ReportRepair {
     private final int[] inputArray;
 
     public ReportRepair(int[] inputArray) {
         this.inputArray = inputArray;
         Arrays.sort(inputArray);
+    }
+
+    public int[] getInputArray(){
+        return inputArray;
     }
 
     public int multiplyEntriesThatSum(int sumValue, int numberOfEntries) {
