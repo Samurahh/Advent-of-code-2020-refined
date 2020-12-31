@@ -1,6 +1,5 @@
 package com.spartaglobal.samurah.day3;
 
-import com.spartaglobal.samurah.day1.ReportRepair;
 import com.spartaglobal.samurah.utilities.FileReader;
 
 import java.io.FileNotFoundException;
