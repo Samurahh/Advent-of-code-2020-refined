@@ -14,7 +14,7 @@ import java.util.HashSet;
  * - sum those counts. (part 1)
  */
 public class CustomCustoms {
-    private GroupAnswers[] groupAnswers;
+    private final GroupAnswers[] groupAnswers;
 
     public CustomCustoms(String[] inputArray) {
         ArrayList<String> inputArrayList = new ArrayList<>();
@@ -51,7 +51,7 @@ public class CustomCustoms {
 
 
     public static class GroupAnswers {
-        private String[] answers;
+        private final String[] answers;
 
         public GroupAnswers(String[] answers) {
             this.answers = answers;
